@@ -60,6 +60,19 @@ MyMobileTemplate/
 └── tsconfig.json
 ```
 
+
+## Install EAS CLI
+npm install -g eas-cli
+
+## Login to Expo
+eas login  #Use the same account as your Expo Go app.
+
+##  Configure EAS for Android
+eas build:configure
+
+## Build the APK (for local install/testing)
+eas build -p android --profile preview
+
 ---
 
 ## 🛠️ Stack
@@ -74,3 +87,19 @@ MyMobileTemplate/
 ## 📄 License
 
 MIT © fathi-ch
+
+## 📦 Export as Android Package
+
+### Build APK (local testing)
+
+```bash
+eas build -p android --profile preview --local
+```
+
+### Build AAB (Google Play)
+
+```bash
+eas build -p android --profile production
+```
+
+> Requires Expo account and `eas.json` (run `eas build:configure`)
