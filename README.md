@@ -73,6 +73,9 @@ eas build:configure
 ## Build the APK (for local install/testing)
 eas build -p android --profile preview
 
+## Rename the new project
+sed -i 's/MyMobileTemplate/{NewProject}/g' app.json README.md
+
 ---
 
 ## 🛠️ Stack
@@ -87,19 +90,3 @@ eas build -p android --profile preview
 ## 📄 License
 
 MIT © fathi-ch
-
-## 📦 Export as Android Package
-
-### Build APK (local testing)
-
-```bash
-eas build -p android --profile preview --local
-```
-
-### Build AAB (Google Play)
-
-```bash
-eas build -p android --profile production
-```
-
-> Requires Expo account and `eas.json` (run `eas build:configure`)
